@@ -35,9 +35,9 @@ img {
 }
 
 /* Base */
-html {
+/* html {
     scroll-behavior: smooth;
-}
+} */
 
 body {
     font: 400 1rem 'DM Sans', sans-serif;

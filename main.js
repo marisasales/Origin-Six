@@ -15,8 +15,11 @@ for(const element of toggle) {
 const links = document.querySelectorAll('nav ul li a')
 
 for(const link of links) {
-    link.addEventListener('click', function () {
+    link.addEventListener('click', function (event) {
+        event.preventDefault()
+
         nav.classList.remove('show')
+        scrollSmooth(link)
     })
 }
 
@@ -31,3 +34,11 @@ window.addEventListener('scroll', function () {
         header.classList.remove('scroll')
     }
 })
+
+// Scroll suave
+function scrollSmooth (link) {
+    const sectionId = link.getAttribute('href')
+    document.querySelector(sectionId).scrollIntoView({
+        behavior: 'smooth'
+    })
+}
