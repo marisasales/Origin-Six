@@ -42,3 +42,30 @@ function scrollSmooth (link) {
         behavior: 'smooth'
     })
 }
+
+/* Testimonials slider */
+const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    pagination: {
+        el: '.swiper-pagination'
+    },
+    mousewheel: true,
+    Keyboard: true
+})
+
+/* ScrollReveal: mostrar elementos quando der scroll */
+const scrollReveal = ScrollReveal({
+    origin: 'top',
+    distance: '30px',
+    duration: 700,
+    reset: true
+})
+
+scrollReveal.reveal(
+    `#home .image, #home .text,
+    #about .image, #about .text,
+    #services header, #services .card,
+    #testimonials header, #testimonials .testimonials,
+    #contact .text, #contact .links
+    `, { interval: 100 }
+)
