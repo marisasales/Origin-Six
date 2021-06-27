@@ -522,15 +522,42 @@ footer .social a:hover {
 
 /* Media Queries */
 /* Medium devices: 767 > */
-@media(min-width: 767px) {
+@media (min-width: 767px) {
+    /* Layout */
     main {
         margin-top: var(--header-height);
     }
-    
+
+    /* Footer */
     footer .container {
         grid-auto-flow: column;
         align-items: center;
         justify-content: space-between;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 992px) {
+    /* Home */
+    #home .image {
+        width: 37.5rem;
+        margin: auto;
+    }
+    
+    /* about */
+    #about .image {
+        width: 40.5rem;
+        margin: auto;
+    }
+
+    /* Services */
+    .card {
+        width: 37.5rem;
+        margin: auto;
+    }
+
+    /* Contact */
+    #contact {
+        text-align: center;
     }
 }
 
